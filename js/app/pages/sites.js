@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const sites = {
 	data:function() {
 		return  {

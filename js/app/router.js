@@ -1,3 +1,4 @@
+import { createRouter, createWebHashHistory } from 'vue-router';
 import {login} from './pages/login.js';
 import {campaigns} from './pages/campaigns.js';
 import {campaign} from './pages/campaign.js';
@@ -9,8 +10,8 @@ import {sites} from './pages/sites.js';
 import {payments} from './pages/payments.js';
 
 
-export const router = VueRouter.createRouter({
-    history: VueRouter.createWebHashHistory(),
+export const router = createRouter({
+    history: createWebHashHistory(),
     routes:[
         {path: '/', name:'Sign in', component: login},
         {path: '/campaigns', name:'Campaigns', component: campaigns},
