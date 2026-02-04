@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const login = {
     data:function() {
         return{

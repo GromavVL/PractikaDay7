@@ -1,4 +1,3 @@
-import { createApp } from 'vue';
 import { router } from './router.js';
 import { popup } from './widgets/popup.js';
 import { msg } from './widgets/msg.js';
@@ -6,7 +5,10 @@ import { header } from './widgets/header.js';
 import { toogle } from './widgets/toogle.js';
 import { img } from './widgets/img.js';
 
-const main = {
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const main = {
         data() {
             return {
                 url: "https://affiliate.yanbasok.com",
@@ -115,11 +117,13 @@ const main = {
         }
     };
 
-createApp(main)
-    .component('toogle', toogle)
-    .component('Image', img)
-    .component('Header', header)
-    .component('popup', popup)
-    .component('msg', msg)
-    .use(router)
-    .mount('#content');
+    Vue.createApp(main)
+        .component('toogle', toogle)    
+        .component('Image', img)    
+        .component('Header', header)
+        .component('popup', popup)
+        .component('msg', msg)
+        .use(router)
+        .mount('#content');
+
+});

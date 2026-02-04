@@ -1,5 +1,3 @@
-import axios from 'axios';
-
 export const users = {
 	data:function() {
 		return  {
